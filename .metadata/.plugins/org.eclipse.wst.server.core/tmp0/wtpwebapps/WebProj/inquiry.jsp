@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<s:from method="post" action="InquiryCompleteAction">
+	<s:form method="post" action="InquiryCompleteAction">
 		名前：<input type="text" name="name"/><br>
 		お問合わせの種類：<br>
 		<select name="qtype">
@@ -21,7 +21,7 @@
 		お問合わせ内容：
 		<s:textarea name="body"/>
 		<br><s:submit value="登録"/>
-	</s:from>
+	</s:form>
 
 </body>
 </html>
