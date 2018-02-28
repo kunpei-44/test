@@ -7,28 +7,29 @@ import java.sql.SQLException;
 
 import com.internousdev.webproj2.util.DBConnector;
 
-
 public class HelloStrutsDAO {
 
-	public boolean select() {
+	public boolean select(){
+
 		boolean ret=false;
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 		String sql = "select * from users";
-		try {
+		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
-			if (rs.next()) {
-				ret=true;
+			if(rs.next()){
+				ret = true;
 			}
-		} catch (SQLException e) {
+		}catch (SQLException e){
 			e.printStackTrace();
 		}
-		try {
+		try{
 			con.close();
-		} catch (SQLException e) {
+		}catch (SQLException e){
 			e.printStackTrace();
 		}
 		return ret;
 	}
+
 }
