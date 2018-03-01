@@ -1,0 +1,68 @@
+header{
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:black;
+    width:100%;
+    height:60px;
+}
+
+.logo{
+    color:white;
+    font-size:30px;
+    line-height:60px;
+    float:left;
+    padding-left:10px;
+}
+
+header ul{
+    line-height:40px;
+    float:right;
+}
+
+header ul li{
+    float:left;
+    list-style:none;
+    font-size:18px;
+    color:white;
+    
+}
+
+main{
+    clear:both;
+}
+
+.maincontainer{
+    width:95%;
+    margin:0 auto;
+    padding-top:70px;
+}
+
+.left{
+    width:70%;
+    background-color:lightblue;
+    height:400px;
+    margin-bottom:40px;
+    float:left;
+}
+
+.right{
+    width:30%;
+    background-color:skyblue;
+    height:400px;
+    margin-bottom:40px;
+    float:right;
+}
+
+footer{
+    clear:left;
+    width:100%;
+    height:60px;
+    color:white;
+    background-color:black;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    text-align:center;
+    line-height:60px;
+}
