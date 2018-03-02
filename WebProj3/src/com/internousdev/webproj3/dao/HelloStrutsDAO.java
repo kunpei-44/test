@@ -8,33 +8,32 @@ import java.sql.SQLException;
 import com.internousdev.webproj3.dto.HelloStrutsDTO;
 import com.internousdev.webproj3.util.DBConnector;
 
-
 public class HelloStrutsDAO {
 
-	public HelloStrutsDTO select() {
-		boolean ret=false;
+	public HelloStrutsDTO select(){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
-		HelloStrutsDTO dto=new HelloStrutsDTO();
+		HelloStrutsDTO dto = new HelloStrutsDTO();
 
-		String sql = "select * from users";
-		try {
+		String sql="select * from users";
+		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 
-			if (rs.next()) {
+			if(rs.next()){
 				dto.setResult("MySQLと接続できます。");
 			}else{
-				dto.setResult("MySQLと接続できません。");
+				dto.setResult("MySQLと接続できません");
 			}
-		} catch (SQLException e) {
+		}catch (SQLException e){
 			e.printStackTrace();
 		}
-		try {
+		try{
 			con.close();
-		} catch (SQLException e) {
+		}catch(SQLException e){
 			e.printStackTrace();
 		}
 		return dto;
 	}
+
 }

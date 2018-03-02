@@ -10,7 +10,6 @@ import java.util.List;
 import com.internousdev.webproj4.dto.LoginDTO;
 import com.internousdev.webproj4.util.DBConnector;
 
-
 public class LoginDAO {
 
 	public String username;
@@ -18,21 +17,20 @@ public class LoginDAO {
 
 	public List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
 
-	public List<LoginDTO> select(String username,String password) {
+	public List<LoginDTO> select(String username, String password){
 
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
-
 		String sql = "select * from users where user_name=? and password=?";
-		try {
+		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 
-			while (rs.next()) {
-				LoginDTO dto=new LoginDTO();
+			while(rs.next()){
+				LoginDTO dto = new LoginDTO();
 				dto.setUsername(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));
 				loginDTOList.add(dto);
@@ -45,15 +43,15 @@ public class LoginDAO {
 				loginDTOList.add(dto);
 			}
 
-
-		} catch (SQLException e) {
+		}catch(SQLException e){
 			e.printStackTrace();
 		}
-		try {
+		try{
 			con.close();
-		} catch (SQLException e) {
+		}catch(SQLException e){
 			e.printStackTrace();
 		}
 		return loginDTOList;
 	}
+
 }

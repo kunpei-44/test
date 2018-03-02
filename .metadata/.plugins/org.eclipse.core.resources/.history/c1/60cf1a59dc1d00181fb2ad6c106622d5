@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+table{
+	width:auto;
+	border-spacing: 0;
+	font-size:14ps;
+}
+
+table th{
+	color: #fff;
+	padding: 8px 15px;
+	background: #258;
+	background:-moz-linear-grandient(rgba(34,85,136,0.7),rgba(34,85,136,0.9) 50%);
+}

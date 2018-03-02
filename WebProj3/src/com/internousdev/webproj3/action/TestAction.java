@@ -3,7 +3,7 @@ package com.internousdev.webproj3.action;
 import com.internousdev.webproj3.dao.TestDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class TestAction extends ActionSupport{
+public class TestAction extends ActionSupport {
 
 	private String username;
 
@@ -11,7 +11,7 @@ public class TestAction extends ActionSupport{
 
 	public String execute(){
 		String ret=ERROR;
-		TestDAO dao=new TestDAO();
+		TestDAO dao = new TestDAO();
 		int count=dao.insert(username, password);
 		if(count>0){
 			ret=SUCCESS;
@@ -19,19 +19,19 @@ public class TestAction extends ActionSupport{
 		return ret;
 	}
 
-	public String getUsername() {
+	public String getUsername(){
 		return username;
 	}
 
-	public void setUsername(String username) {
+	public void setUsername(String username){
 		this.username = username;
 	}
 
-	public String getPassword() {
+	public String getPassword(){
 		return password;
 	}
-
-	public void setPassword(String password) {
+	public void setPassword(String password){
 		this.password = password;
 	}
+
 }

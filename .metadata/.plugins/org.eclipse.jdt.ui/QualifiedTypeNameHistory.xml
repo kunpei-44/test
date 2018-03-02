@@ -3,4 +3,6 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="com.internousdev.login.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj3.dao.LoginDAO"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>
