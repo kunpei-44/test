@@ -1,0 +1,60 @@
+package com.internousdev.webproj4.action;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.webproj4.dao.HelloStrutsDAO;
+import com.internousdev.webproj4.dto.HelloStrutsDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloStrutsAction extends ActionSupport implements SessionAware{
+
+	private Map<String, Object> session;
+
+	private ArrayList<HelloStrutsDTO> DTOList = new ArrayList<HelloStrutsDTO>();
+
+	public String execute(){
+		String ret = ERROR;
+		HelloStrutsDAO dao=new HelloStrutsDAO();
+
+		ArrayList<HelloStrutsDTO> list = dao.select();
+
+		System.out.println(list.size());
+
+		if(list.size()>0){
+			ret=SUCCESS;
+			session.put("list", list);
+		}else{
+			ret=ERROR;
+		}
+		return ret;
+	}
+
+	public ArrayList<HelloStrutsDTO> getHelloStrutsDTOList(){
+		return DTOList;
+	}
+
+	public void setHelloStrutsDTOList(ArrayList<HelloStrutsDTO> list){
+		this.DTOList = list;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+
+	public ArrayList<HelloStrutsDTO> getDTOList() {
+		return DTOList;
+	}
+
+	public void setDTOList(ArrayList<HelloStrutsDTO> dTOList) {
+		DTOList = dTOList;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+
+}

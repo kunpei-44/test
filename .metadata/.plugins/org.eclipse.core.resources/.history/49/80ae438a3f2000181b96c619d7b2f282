@@ -1,0 +1,38 @@
+package com.internousdev.webproj4.action;
+
+import java.util.ArrayList;
+
+import com.internousdev.webproj4.dao.HelloStrutsDAO;
+import com.internousdev.webproj4.dto.HelloStrutsDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloStrutsAction extends ActionSupport {
+
+	ArrayList<HelloStrutsDTO> HelloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+
+
+	public String execute(){
+		String ret = ERROR;
+		HelloStrutsDAO dao=new HelloStrutsDAO();
+
+		ArrayList<HelloStrutsDTO> list = dao.select();
+
+		System.out.println(list.size());
+
+		if(list.size()>0){
+			ret=SUCCESS;
+		}else{
+			ret=ERROR;
+		}
+		return ret;
+	}
+
+	public ArrayList<HelloStrutsDTO> getHelloStrutsDTOList(){
+		return HelloStrutsDTOList;
+	}
+
+	public void setHelloStrutsDTOList(ArrayList<HelloStrutsDTO> list){
+		HelloStrutsDTOList = list;
+	}
+
+}

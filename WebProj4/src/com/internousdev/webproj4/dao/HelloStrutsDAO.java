@@ -5,16 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.internousdev.webproj4.dto.HelloStrutsDTO;
 import com.internousdev.webproj4.util.DBConnector;
 
 public class HelloStrutsDAO {
 
-	List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+	ArrayList<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
 
-	public List<HelloStrutsDTO> select(){
+	public ArrayList<HelloStrutsDTO> select(){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
@@ -30,6 +29,7 @@ public class HelloStrutsDAO {
 				dto.setUserName(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));
 				dto.setResult("MySQLと接続できます。");
+				System.out.println(dto.getUserId());
 				helloStrutsDTOList.add(dto);
 			}
 		}catch(SQLException e){
