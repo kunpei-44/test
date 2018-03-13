@@ -6,7 +6,7 @@
 <fullyQualifiedTypeName name="com.internousdev.webproj3.dao.LoginDAO"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.internousdev.webproj5.dao.HelloStrutsDAO"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
 </qualifiedTypeNameHistroy>

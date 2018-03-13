@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta http-equiv="imagetoobar" content="no" />
+	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
@@ -17,7 +17,7 @@
 			margin: 0;
 			padding: 0;
 			line-height: 1.6;
-			letter-spacting: 1px;
+			letter-spacing: 1px;
 			font-family: Verdana, Helvetica, sans-serif;
 			font-size: 12px;
 			color: #333;
@@ -74,6 +74,18 @@
 			<s:form action="HomeAction">
 				<s:submit value="商品購入" />
 			</s:form>
+
+		<br/>
+			<s:form action="InquiryAction">
+				<s:submit value="問い合わせ" />
+			</s:form>
+
+		<br/>
+			<s:form action="LoginAction">
+				<s:submit value="ログイン" />
+			</s:form>
+
+		<br/>
 			<s:if test="#session.id!=null">
 				<p>ログアウトする場合は
 					<a href='<s:url action="LogoutAction" />'>こちら</a></p>

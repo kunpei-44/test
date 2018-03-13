@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta http-equiv="imagetoobar" content="no" />
+	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<title>UserCreate画面</title>
@@ -18,7 +18,7 @@
 			margin: 0;
 			padding: 0;
 			line-height: 1.6;
-			letter-spacting: 1px;
+			letter-spacing: 1px;
 			font-family: Verdana, Helvetica, sans-serif;
 			font-size: 12px;
 			color: #333;

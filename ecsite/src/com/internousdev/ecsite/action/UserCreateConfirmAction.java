@@ -14,7 +14,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 	public Map<String, Object> session;
 	private String errorMessage;
 
-	public String exevute(){
+	public String execute(){
 
 		String result = SUCCESS;
 

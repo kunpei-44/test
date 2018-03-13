@@ -17,7 +17,7 @@
 			margin: 0;
 			padding: 0;
 			line-height: 1.6;
-			letter-spacting: 1px;
+			letter-spacing: 1px;
 			font-family: Verdana, Helvetica, sans-serif;
 			font-size: 12px;
 			color: #333;
