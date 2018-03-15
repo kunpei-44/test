@@ -86,6 +86,11 @@
 			</s:form>
 
 		<br/>
+			<s:form action="AdminAction">
+				<s:submit value="管理者画面" />
+			</s:form>
+
+		<br/>
 			<s:if test="#session.id!=null">
 				<p>ログアウトする場合は
 					<a href='<s:url action="LogoutAction" />'>こちら</a></p>

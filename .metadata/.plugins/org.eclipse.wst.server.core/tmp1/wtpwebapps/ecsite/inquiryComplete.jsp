@@ -43,7 +43,7 @@
 
 		#main {
 			width: 100%;
-			height: 500px;
+			height: auto;
 			text-align: center;
 		}
 
@@ -62,7 +62,9 @@
 			display: inline-block;
 			text-align: right;
 			margin-top: 50px;
+			margin-bottom: 120px;
 		}
+
 		</style>
 </head>
 <body>
@@ -78,35 +80,39 @@
 		<br>
 		<h3><s:property value="name" />さん、お問い合わせありがとうございました。</h3>
 		<br>
+
+
+		<div id="qu">
+			<p>▼お問い合わせ履歴▼</p>
+		</div>
+
 		<table border="1">
 				<tr>
 					<td>名前</td>
 					<td>お問い合わせの種類</td>
 					<td>お問い合わせ内容</td>
+					<td>お問い合わせ送信時間</td>
 				</tr>
 
 				<s:iterator value="session.inquiryDTOList">
 				<tr>
 
-					<td><s:property value="getName()" /></td>
-					<s:if test='getQtype()=="company"'>
+					<td><s:property value="name" /></td>
+					<s:if test='qtype=="company"'>
 						<td>会社について</td>
 					</s:if>
-					<s:if test='getQtype()=="product"'>
+					<s:if test='qtype=="product"'>
 						<td>製品について</td>
 					</s:if>
-					<s:if test='getQtype()=="support"'>
+					<s:if test='qtype=="support"'>
 						<td>アフターサポートについて</td>
 					</s:if>
-					<td><s:property value="getBody()" /></td>
+					<td><s:property value="body" /></td>
+					<td><s:property value="insert_date" /></td>
 
 				</tr>
 				</s:iterator>
 		</table>
-		<s:form action="InquiryCompleteAction">
-			<input type="hidden" name="deleteFlg" value="1">
-			<s:submit value="削除" method="delete" />
-		</s:form>
 
 		<div id="text-link">
 			<a href='<s:url action="GoHomeAction" />'>トップへ戻る</a>

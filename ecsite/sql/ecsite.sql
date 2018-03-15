@@ -45,9 +45,19 @@ drop table if exists inquiry;
 create table inquiry(
 	name varchar(16),
 	qtype varchar(255),
-	body varchar(255)
+	body varchar(255),
+	insert_date datetime
+);
+
+drop table if exists admin_login;
+
+create table admin_login(
+	admin_id varchar(16) unique,
+	admin_pass varchar(16)
 );
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES("ノートBook", 100, 50);
 
 INSERT INTO login_user_transaction(login_id, login_pass, user_name) VALUES("internous", "internous01", "test");
+
+INSERT INTO admin_login(admin_id, admin_pass) VALUES("hayasi", "hayasi01");

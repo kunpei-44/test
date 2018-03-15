@@ -53,6 +53,13 @@
 			background-color: black;
 			clear: both;
 		}
+
+		#text-link{
+			display: inline-block;
+			text-align: right;
+			margin-top: 50px;
+			margin-bottom: 120px;
+		}
 		</style>
 </head>
 <body>
@@ -68,18 +75,22 @@
 		</div>
 		<s:form method="post" action="InquiryCompleteAction">
 			名前：<input type="text" name="name" /><br>
-			お問い合わせの種類：<br>
+			お問い合わせの種類：<br><br>
 			<select name="qtype">
 				<option value="company">会社について</option>
 				<option value="product">製品について</option>
 				<option value="support">アフターサポートについて</option>
 			</select>
-			<br>
+			<br><br>
 			お問い合わせ内容：
 			<s:textarea name="body" />
 			<br>
 			<s:submit value="登録" />
 		</s:form>
+
+		<div id="text-link">
+			<a href='<s:url action="GoHomeAction" />'>トップへ戻る</a>
+		</div>
 	</div>
 
 	<div id="footer">

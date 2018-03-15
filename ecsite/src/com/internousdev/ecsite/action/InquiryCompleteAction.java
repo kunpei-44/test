@@ -21,14 +21,10 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	private InquiryCompleteDAO dao = new InquiryCompleteDAO();
 
 	public String execute() {
-		System.out.println(name);
-		System.out.println(qtype);
-		System.out.println(body);
-
 		String ret = SUCCESS;
 
 		if (deleteFlg.equals("0")) {
-			if (!(name.equals("")) && !(qtype.equals("")) && !(body.equals(""))) {
+			if (!(name.equals("")) && !(body.equals(""))) {
 				int count = dao.insert(name, qtype, body);
 				if (count > 0) {
 					inquiryDTOList = dao.select();
@@ -37,9 +33,6 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 				}
 				ret = SUCCESS;
 			}
-
-
-			System.out.println("aaa");
 
 		} else{
 			delete();

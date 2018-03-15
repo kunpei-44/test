@@ -9,10 +9,13 @@ import java.util.List;
 
 import com.internousdev.ecsite.dto.InquiryDTO;
 import com.internousdev.ecsite.util.DBConnector;
+import com.internousdev.ecsite.util.DateUtil;
 
 public class InquiryCompleteDAO {
 
 	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
+	DateUtil dateUtil = new DateUtil();
+
 
 	public List<InquiryDTO> select() {
 		DBConnector db = new DBConnector();
@@ -28,10 +31,7 @@ public class InquiryCompleteDAO {
 				dto.setName(rs.getString("name"));
 				dto.setQtype(rs.getString("qtype"));
 				dto.setBody(rs.getString("body"));
-				System.out.println(dto.getName());
-				System.out.println(dto.getQtype());
-				System.out.println(dto.getBody());
-
+				dto.setInsert_date(rs.getString("insert_date"));
 				inquiryDTOList.add(dto);
 			}
 
@@ -51,13 +51,13 @@ public class InquiryCompleteDAO {
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
-		String sql = "insert into inquiry values(?,?,?)";
+		String sql = "insert into inquiry values(?,?,?,?)";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, name);
 			ps.setString(2, qtype);
 			ps.setString(3, body);
-
+			ps.setString(4, dateUtil.getDate());
 			int i = ps.executeUpdate();
 			if (i > 0) {
 				System.out.println(i + "件登録されました");

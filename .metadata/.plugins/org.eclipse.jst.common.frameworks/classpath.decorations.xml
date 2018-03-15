@@ -1,0 +1,7 @@
+<classpath>
+  <container id="template!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/internousdev/Desktop/workspace/workspace-hayashi/test/template/WebContent/WEB-INF/lib/mysql-connector-java-5.1.45-bin.jar">
+      <source-attachment-path>/ecsite/WebContent/WEB-INF/lib</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

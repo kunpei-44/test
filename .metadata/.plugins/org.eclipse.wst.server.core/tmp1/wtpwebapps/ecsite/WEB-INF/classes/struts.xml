@@ -79,8 +79,18 @@
 		<action name="InquiryCompleteAction"
 			class="com.internousdev.ecsite.action.InquiryCompleteAction" method="execute">
 			<result name="success">inquiryComplete.jsp</result>
-			<result name="delete">inquiryComplete.jsp</result>
+			<result name="delete">inquiryDelete.jsp</result>
+		</action>
 
+		<action name="AdminAction" class="com.internousdev.ecsite.action.AdminAction"
+			method="execute">
+			<result name="success">adminLogin.jsp</result>
+		</action>
+
+		<action name="AdminLoginAction" class="com.internousdev.ecsite.action.AdminLoginAction"
+			method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error">adminLogin.jsp</result>
 		</action>
 
 	</package>
