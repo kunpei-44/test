@@ -1,0 +1,14 @@
+package practice;
+
+public class Main {
+
+	public static void main(String[] args) {
+		hello("林");
+		hello("砂糖");
+		hello("カロ");
+	}
+
+	public static void hello(String name){
+		System.out.println(name + "さん、こんにちは");
+	}
+}
