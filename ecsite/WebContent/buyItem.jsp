@@ -68,12 +68,13 @@
 		<div>
 			<s:form action="BuyItemAction">
 			<table>
+				<s:iterator value="buyItemDTOList">
 				<tr>
 					<td>
 						<span>商品名</span>
 					</td>
 					<td>
-						<s:property value="session.buyItem_name" /><br>
+						<s:property value="itemName" /><br>
 					</td>
 				</tr>
 				<tr>
@@ -81,23 +82,44 @@
 						<span>値段</span>
 					</td>
 					<td>
-						<s:property value="session.buyItem_price" /><span>円</span>
+						<s:property value="itemPrice" /><span>円</span>
 					</td>
 				</tr>
+				<tr>
+					<td>
+						<span>在庫</span>
+					</td>
+					<td>
+					<s:if test="item_stock>0">
+						<s:property value="item_stock" />
+					</s:if>
+					<s:else>
+						<span>在庫売り切れ</span>
+					</s:else>
+					</td>
 				<tr>
 					<td>
 						<span>購入個数</span>
 					</td>
 					<td>
+						<s:if test="item_stock>0">
 						<select name="count">
-							<option value="1" selected="selected">1</option>
+							<option value="0" selected="selected">0</option>
+							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
 							<option value="4">4</option>
 							<option value="5">5</option>
 						</select>
+						</s:if>
+						<s:else>
+							<select name="count">
+								<option value="0" selected="selected">0</option>
+							</select>
+						</s:else>
 					</td>
 				</tr>
+				</s:iterator>
 				<tr>
 					<td>
 						<span>支払い方法</span>

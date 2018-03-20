@@ -1,9 +1,9 @@
 set names utf8;
 set foreign_key_checks = 0;
-drop database if exists ecsite;
+drop database if exists ecsite_hayashi;
 
-create database if not exists ecsite;
-use ecsite;
+create database if not exists ecsite_hayashi;
+use ecsite_hayashi;
 
 drop table if exists login_user_transaction;
 
@@ -12,6 +12,10 @@ create table login_user_transaction(
 	login_id varchar(16) unique,
 	login_pass varchar(16),
 	user_name varchar(50),
+	user_gender varchar(50),
+	user_prefecture varchar(50),
+	user_address varchar(50),
+	user_tell varchar(50),
 	insert_date datetime,
 	updated_date datetime
 );
@@ -56,8 +60,20 @@ create table admin_login(
 	admin_pass varchar(16)
 );
 
-INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES("ノートBook", 100, 50);
+INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES
+("NoteBook", 100, 50),
+("ballpoint pen", 50, 50),
+("correction pen", 120, 50),
+("eraser", 50, 50),
+("ruler", 40, 50),
+("scissors", 80, 50),
+("label", 30, 50),
+("glue", 60, 50),
+("fountain pen", 10000, 50),
+("compass", 150, 50);
 
-INSERT INTO login_user_transaction(login_id, login_pass, user_name) VALUES("internous", "internous01", "test");
 
-INSERT INTO admin_login(admin_id, admin_pass) VALUES("hayasi", "hayasi01");
+INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_gender, user_prefecture, user_address, user_tell) VALUES
+("jiro", "456", "test", "男", "東京", "千代田区", "090-XXXX-XXXX");
+
+INSERT INTO admin_login(admin_id, admin_pass) VALUES("taro", "123");

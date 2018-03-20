@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -18,6 +19,8 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
+	private BuyItemDTO buyItemDTO = new BuyItemDTO();
+	private List<BuyItemDTO> buyItemDTOList;
 
 	public String execute(){
 		String result = ERROR;
@@ -26,12 +29,14 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()){
 			result = SUCCESS;
-			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
 
-			session.put("login_user_id",loginDTO.getLoginId());
+			buyItemDTOList = buyItemDAO.getBuyItemInfo();
+
+			session.put("buyItemDTOList", buyItemDTOList);
 			session.put("id", buyItemDTO.getId());
-			session.put("buyItem_name", buyItemDTO.getItemName());
-			session.put("buyItem_price", buyItemDTO.getItemPrice());
+			session.put("login_user_id",loginDTO.getLoginId());
+			session.put("userName", loginDTO.getUserName());
+			session.put("userPrefecture", loginDTO.getUserPrefecture());
 
 			return result;
 		}
@@ -52,6 +57,14 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
 	public void setLoginPassword(String loginPassword){
 		this.loginPassword = loginPassword;
+	}
+
+	public List<BuyItemDTO> getBuyItemDTOList(){
+		return buyItemDTOList;
+	}
+
+	public void setBuyItemDTOList(List<BuyItemDTO> buyItemDTOList){
+		this.buyItemDTOList = buyItemDTOList;
 	}
 
 	@Override

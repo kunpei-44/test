@@ -5,6 +5,12 @@ public class BuyItemDTO {
 	public int id;
 	public String itemName;
 	public String itemPrice;
+	public int item_stock;
+	public int count;
+	public int total_price;
+	public int total_count;
+	public String pay;
+
 
 	public String getItemName(){
 		return itemName;
@@ -28,6 +34,46 @@ public class BuyItemDTO {
 
 	public void setId(int id){
 		this.id = id;
+	}
+
+	public int getCount(){
+		return count;
+	}
+
+	public void setCount(int count){
+		this.count = count;
+	}
+
+	public int getTotal_price(){
+		return total_price;
+	}
+
+	public void setTotal_price(int total_price){
+		this.total_price = total_price;
+	}
+
+	public int getTotal_count(){
+		return total_count;
+	}
+
+	public void setTotal_count(int total_count){
+		this.total_count = total_count;
+	}
+
+	public String getPay(){
+		return pay;
+	}
+
+	public void setPay(String pay){
+		this.pay = pay;
+	}
+
+	public int getItem_stock(){
+		return item_stock;
+	}
+
+	public void setItem_stock(int item_stock){
+		this.item_stock = item_stock;
 	}
 
 }

@@ -1,0 +1,82 @@
+package com.internousdev.ecsite.action;
+
+import java.util.Map;
+import java.util.List;
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.internousdev.ecsite.dto.BuyItemDTO;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+public class BuyItemAction extends ActionSupport implements SessionAware {
+
+	private ArrayList<BuyItemDTO> buyItemDTOList = new ArrayList<>();
+
+	private List<String> count;
+	private int pay;
+	public Map<String, Object> session;
+
+	public String execute(){
+		String result = SUCCESS;
+		session.put("count", count);
+
+		@SuppressWarnings("unchecked")
+		List<BuyItemDTO> list =(List<BuyItemDTO>) session.get("buyItemDTOList");
+
+		for(int i=0; i<count.size(); i++){
+			BuyItemDTO buyItemDTO = new BuyItemDTO();
+
+			String buyItemName = list.get(i).getItemName();
+			session.put("itenName",buyItemName);
+
+			String buyItemPrice = list.get(i).getItemPrice();
+			session.put("itemPrice", buyItemPrice);
+
+			int buyItemId = list.get(i).getId();
+			session.put("id", buyItemId);
+
+			int item_stock = list.get(i).getItem_stock();
+
+			int intCount = Integer.parseInt(count.get(i));
+
+			int intPrice = Integer.parseInt(list.get(i).getItemPrice());
+
+
+			if(intCount !=0){
+
+				buyItemDTO.setId((int) session.get("id"));
+				buyItemDTO.setItemName(session.get("itenName").toString());
+				buyItemDTO.setItemPrice(session.get("itemPrice").toString());
+				buyItemDTO.setItem_stock(item_stock);
+				buyItemDTO.setCount(intCount);
+				buyItemDTO.setTotal_price(intCount * intPrice);
+				session.put("total_price",intCount * intPrice);
+			}
+		}
+		session.put("total_price",intCount * intPrice);
+		String payment;
+		if(pay.equals("1")){
+			payment = "現金払い";
+			session.put("pay",payment);
+		}else{
+			payment = "クレジットカード";
+			session.put("pay",payment);
+		}
+		return result;
+	}
+
+	public void setCount(int count){
+		this.count = count;
+	}
+
+	public void setPay(String pay){
+		this.pay = pay;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> session){
+		this.session = session;
+	}
+
+}
