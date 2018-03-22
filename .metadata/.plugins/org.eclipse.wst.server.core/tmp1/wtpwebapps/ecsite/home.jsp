@@ -81,11 +81,6 @@
 			</s:form>
 
 		<br/>
-			<s:form action="LoginAction">
-				<s:submit value="ログイン" />
-			</s:form>
-
-		<br/>
 			<s:form action="AdminAction">
 				<s:submit value="管理者画面" />
 			</s:form>

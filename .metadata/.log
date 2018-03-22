@@ -4619,3 +4619,501 @@ java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2270)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:453)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2018-03-22 13:44:21.783 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_74
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2018-03-22 13:46:27.431
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-03-22 13:46:27.431
+!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
+		,
+		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@74fbee59,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
+		Open a dialog to search for and insert code snippets,
+		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3794621d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2018-03-22 13:46:35.732
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
+	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 13:51:43.371
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2018-03-22 13:52:00.186
+!MESSAGE Updating the index from remote failed. ; バージョン: 1.100.0.v20160217-0435
+!STACK 0
+java.net.UnknownHostException: www.eclipse.org
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:102)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.downloadDatabase(IO.java:171)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:279)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 14:18:23.899
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 14:26:56.214
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 14:33:24.050
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 15:29:22.921
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 15:54:03.761
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-22 15:54:54.321
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:582)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 16:02:44.271
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 16:09:33.632
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.wst.xml.core 4 4 2018-03-22 16:10:07.203
+!MESSAGE IStructuredDocumentRegion management failed.
+!STACK 0
+org.eclipse.wst.xml.core.internal.document.StructuredDocumentRegionManagementException: IStructuredDocumentRegion management failed.
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2222)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.removeStructuredDocumentRegion(XMLModelParser.java:2281)
+	at org.eclipse.wst.xml.core.internal.document.XMLModelParser.replaceStructuredDocumentRegions(XMLModelParser.java:2339)
+	at org.eclipse.wst.xml.core.internal.document.DOMModelImpl.nodesReplaced(DOMModelImpl.java:737)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument._fireEvent(BasicStructuredDocument.java:600)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.fireStructuredDocumentEvent(BasicStructuredDocument.java:1198)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.internalReplaceText(BasicStructuredDocument.java:1979)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2423)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replaceText(BasicStructuredDocument.java:2408)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$2(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$3.run(JobSafeStructuredDocument.java:141)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replaceText(JobSafeStructuredDocument.java:144)
+	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocument.replace(BasicStructuredDocument.java:2368)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.access$0(JobSafeStructuredDocument.java:1)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument$1.run(JobSafeStructuredDocument.java:103)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.sse.ui.EditorExecutionContext.execute(EditorExecutionContext.java:149)
+	at org.eclipse.wst.sse.core.internal.text.JobSafeStructuredDocument.replace(JobSafeStructuredDocument.java:106)
+	at org.eclipse.jface.text.projection.ProjectionTextStore.replace(ProjectionTextStore.java:111)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1184)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.jface.text.projection.ProjectionDocument.replace(ProjectionDocument.java:629)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.replaceTextRange(DefaultDocumentAdapter.java:248)
+	at org.eclipse.swt.custom.StyledText.modifyContent(StyledText.java:7404)
+	at org.eclipse.swt.custom.StyledText.sendKeyEvent(StyledText.java:8255)
+	at org.eclipse.swt.custom.StyledText.doContent(StyledText.java:2585)
+	at org.eclipse.swt.custom.StyledText.handleKey(StyledText.java:6050)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6081)
+	at org.eclipse.swt.custom.StyledText$8.handleEvent(StyledText.java:5768)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1122)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1164)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1160)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1581)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4795)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:343)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4676)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5050)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2018-03-22 16:13:29.535
+!MESSAGE 予期しない例外が起こりました。
+!STACK 0
+java.util.ConcurrentModificationException
+	at java.util.HashMap$HashIterator.nextNode(HashMap.java:1429)
+	at java.util.HashMap$ValueIterator.next(HashMap.java:1458)
+	at org.eclipse.ui.internal.services.ServiceLocator.dispose(ServiceLocator.java:136)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:1993)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1600)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$16(WorkbenchWindow.java:1542)
+	at org.eclipse.ui.internal.WorkbenchWindow$11.run(WorkbenchWindow.java:1628)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1625)
+	at org.eclipse.ui.internal.Workbench$14.run(Workbench.java:1189)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1171)
+	at org.eclipse.ui.internal.Workbench.access$22(Workbench.java:1113)
+	at org.eclipse.ui.internal.Workbench$19.run(Workbench.java:1454)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1451)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1424)
+	at org.eclipse.ui.internal.Workbench$58.handleEvent(Workbench.java:2946)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3313)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(OS.java:2544)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:498)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4774)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1633)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2117)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5063)
+	at org.eclipse.swt.internal.win32.OS.PeekMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.PeekMessage(OS.java:3141)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+!SESSION 2018-03-22 16:22:01.100 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_74
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-03-22 16:22:07.714
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2018-03-22 16:22:14.782
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.jface 2 0 2018-03-22 16:22:22.395
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-03-22 16:22:22.395
+!MESSAGE ALT+CTRL+SPACE の競合が発生しました:
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(AnyEdit.CnvrtTabToSpaces.command,タブをスペースに,
+		,
+		Category(AnyEdit.category,AnyEdit ツール,AnyEdit ツール・キー・バインド,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@64a9719a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(ALT+CTRL+SPACE,
+	ParameterizedCommand(Command(org.eclipse.recommenders.snipmatch.rcp.commands.completion,Snipmatch スニペット・コンプリート,
+		Open a dialog to search for and insert code snippets,
+		Category(org.eclipse.jdt.ui.category.source,ソース,Java ソース・アクション,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@bc70176,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2018-03-22 16:22:29.548
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V)
+	at org.eclipse.swt.SWT.error(SWT.java:4491)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:138)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: java.lang.NoSuchMethodError: org.eclipse.ui.internal.registry.FileEditorMapping.setDefaultEditor(Lorg/eclipse/ui/internal/registry/EditorDescriptor;)V
+	at org.sf.feeling.decompiler.Startup$SetupClassFileAssociationRunnable.run(Startup.java:81)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	... 23 more
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 16:27:11.379
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 568 2018-03-22 16:39:26.677
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers.snap (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1769)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1853)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1222)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1163)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui.ide 4 4 2018-03-22 17:41:51.012
+!MESSAGE ワークスペースの保管の問題
+
+!ENTRY org.eclipse.ui.ide 4 1 2018-03-22 17:41:51.014
+!MESSAGE ワークベンチの状態を保管中に問題が発生しました。
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2018-03-22 17:41:51.014
+!MESSAGE '/RemoteSystemsTempFiles' のメタデータを書き込みできませんでした。
+!STACK 0
+java.io.FileNotFoundException: C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\.metadata\.plugins\org.eclipse.core.resources\.projects\RemoteSystemsTempFiles\.markers (指定されたパスが見つかりません。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1658)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1740)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1197)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2270)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:453)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)

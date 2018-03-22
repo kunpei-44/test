@@ -72,6 +72,17 @@
 			<p>MyPage</p>
 		</div>
 		<div>
+		<s:form>
+			<tr>
+				<td>
+					ユーザー名：
+				</td>
+				<td>
+					<s:property value="session.userName" />
+				</td>
+			</tr>
+		</s:form>
+		<div>
 		<s:if test="myPageList == null">
 			<h3>ご購入情報はありません。</h3>
 		</s:if>
@@ -106,6 +117,7 @@
 		<div id="text-right">
 			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 			<p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>
+		</div>
 		</div>
 		</div>
 	</div>

@@ -2,11 +2,12 @@ package com.internousdev.ecsite.action;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.ecsite.dao.MyPageDAO;
+import com.internousdev.ecsite.dto.BuyItemDTO;
 import com.internousdev.ecsite.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -14,12 +15,19 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MyPageAction extends ActionSupport implements SessionAware {
 
 	public Map<String, Object> session;
-	private MyPageDAO myPageDAO = new MyPageDAO();
+	
+	private List<BuyItemDTO> buyItemDTOList;
+	
 	private ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
+	
 	private String deleteFlg;
+	
 	private String message;
 
+	
 	public String execute() throws SQLException{
+		@SuppressWarnings("unchecked")
+		List<BuyItemDTO> buyItemDTOList = (List<BuyItemDTO>) session.get("list");
 		if(!session.containsKey("id")){
 			return ERROR;
 		}

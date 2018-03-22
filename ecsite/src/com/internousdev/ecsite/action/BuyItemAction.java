@@ -22,7 +22,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		session.put("count", count);
 
 		@SuppressWarnings("unchecked")
-		List<BuyItemDTO> list =(List<BuyItemDTO>) session.get("buyItemDTOList");
+		ArrayList<BuyItemDTO> list =(ArrayList<BuyItemDTO>) session.get("buyItemDTOList");
 
 		for(int i=0; i<count.size(); i++){
 			BuyItemDTO buyItemDTO = new BuyItemDTO();
@@ -106,6 +106,8 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	public void setBuyItemDTOList(ArrayList<BuyItemDTO> buyItemDTOList){
 		this.buyItemDTOList = buyItemDTOList;
 	}
+
+
 
 	@Override
 	public void setSession(Map<String, Object> session){

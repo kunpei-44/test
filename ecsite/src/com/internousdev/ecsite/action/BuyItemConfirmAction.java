@@ -1,24 +1,58 @@
 package com.internousdev.ecsite.action;
 
-import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.interceptor.SessionAware;
-import com.internousdev.ecsite.dao.BuyItemCompleteDAO;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Map;
 
-public class BuyItemConfirmAction extends ActionSupport implements SessionAware {
-	public Map<String, Object> session;
-	private BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
-	public String execute() throws SQLException{
-		buyItemCompleteDAO.buyItemInfo(
-				session.get("id").toString(),
-				session.get("login_user_id").toString(),
-				session.get("total_price").toString(),
-				session.get("count").toString(),
-				session.get("pay").toString());
+import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.ecsite.dao.BuyItemCompleteDAO;
+import com.internousdev.ecsite.dto.BuyItemDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class BuyItemConfirmAction extends ActionSupport implements SessionAware {
+
+	public Map<String, Object> session;
+
+	private BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
+	private ArrayList<BuyItemDTO> buyItemDTOList = new ArrayList<>();
+
+	@SuppressWarnings("unchecked")
+	public String execute() throws SQLException{
+
+		buyItemDTOList=(ArrayList<BuyItemDTO>) session.get("list");
+
+		for(int i=0; i<buyItemDTOList.size(); i++){
+
+			int a=buyItemDTOList.get(i).getItem_stock();
+
+			int id=buyItemDTOList.get(i).getId();
+
+			int b=buyItemDTOList.get(i).getTotal_price();
+			String total_price=String.valueOf(b);
+
+			int count = buyItemDTOList.get(i).getCount();
+
+			int item_stock = a - count;
+
+			if(item_stock<0){
+				String result=ERROR;
+				return result;
+			}
+
+
+		BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
+		buyItemCompleteDAO.buyItemInfo(
+				id,
+				session.get("login_user_id").toString(),
+				total_price,
+				count,
+				buyItemDTOList.get(i).pay,
+				item_stock);
+		}
 		String result = SUCCESS;
 		return result;
+
 	}
 
 	@Override
