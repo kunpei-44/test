@@ -78,11 +78,14 @@
 			<p>管理者画面</p>
 		</div>
 
-		<p>お問い合わせ履歴を削除する</p>
+		<p>商品を管理する</p>
+		<s:form action="AdminMerchanAction">
+			<s:submit value="商品管理" />
+		</s:form>
 
-		<s:form action="InquiryCompleteAction">
-			<input type="hidden" name="deleteFlg" value="1">
-			<s:submit value="削除" method="delete" />
+		<p>問い合わせを管理する</p>
+		<s:form action="AdminInquiryAction">
+			<s:submit value="問い合わせ管理" />
 		</s:form>
 
 		<div id="text-link">

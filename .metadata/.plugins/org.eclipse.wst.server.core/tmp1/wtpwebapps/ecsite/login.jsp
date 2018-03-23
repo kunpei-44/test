@@ -85,6 +85,7 @@
 					<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 			</div>
 		</div>
+
 	</div>
 
 	<div id="footer">
