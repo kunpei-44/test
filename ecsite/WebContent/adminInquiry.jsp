@@ -76,8 +76,11 @@
 		</div>
 
 		<div id="qu">
-			<p>▼お問い合わせ履歴▼</p>
-		</div>
+		<s:if test="inquiryDTOList == null">
+			<h3>お問い合わせはありません。</h3>
+		</s:if>
+		<s:else>
+			<h3>▼お問い合わせ履歴▼</h3>
 
 		<table border="1">
 				<tr>
@@ -114,10 +117,12 @@
 			<input type="hidden" name="deleteFlg" value="1">
 			<s:submit value="削除" method="delete" />
 		</s:form>
+		</s:else>
 
 		<div id="text-link">
 			<a href='<s:url action="AdminLoginAction" />'>戻る</a>
 		</div>
+	</div>
 	</div>
 	<div id="footer">
 		<div id="pr">

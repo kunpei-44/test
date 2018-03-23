@@ -84,38 +84,6 @@
 		<h3>またのご利用をお待ちしています。</h3>
 
 
-		<div id="qu">
-			<p>▼お問い合わせ履歴▼</p>
-		</div>
-
-		<table border="1">
-				<tr>
-					<td>名前</td>
-					<td>お問い合わせの種類</td>
-					<td>お問い合わせ内容</td>
-					<td>お問い合わせ送信時間</td>
-				</tr>
-
-				<s:iterator value="session.inquiryDTOList">
-				<tr>
-
-					<td><s:property value="name" /></td>
-					<s:if test='qtype=="company"'>
-						<td>会社について</td>
-					</s:if>
-					<s:if test='qtype=="product"'>
-						<td>製品について</td>
-					</s:if>
-					<s:if test='qtype=="support"'>
-						<td>アフターサポートについて</td>
-					</s:if>
-					<td><s:property value="body" /></td>
-					<td><s:property value="insert_date" /></td>
-
-				</tr>
-				</s:iterator>
-		</table>
-
 		<div id="text-link">
 			<a href='<s:url action="GoHomeAction" />'>トップへ戻る</a>
 		</div>
