@@ -76,10 +76,10 @@
 		</div>
 
 		<div id="qu">
-		<s:if test="inquiryDTOList == null">
+		<s:if test="session.inquiryDTOList == null">
 			<h3>お問い合わせはありません。</h3>
 		</s:if>
-		<s:elseif test="inquiryDTOList != null">
+		<s:elseif test="session.inquiryDTOList != null">
 			<h3>▼お問い合わせ履歴▼</h3>
 
 		<table border="1">

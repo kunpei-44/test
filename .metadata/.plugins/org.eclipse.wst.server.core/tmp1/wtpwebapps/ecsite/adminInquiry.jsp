@@ -79,7 +79,7 @@
 		<s:if test="inquiryDTOList == null">
 			<h3>お問い合わせはありません。</h3>
 		</s:if>
-		<s:else>
+		<s:elseif test="inquiryDTOList != null">
 			<h3>▼お問い合わせ履歴▼</h3>
 
 		<table border="1">
@@ -117,7 +117,7 @@
 			<input type="hidden" name="deleteFlg" value="1">
 			<s:submit value="削除" method="delete" />
 		</s:form>
-		</s:else>
+		</s:elseif>
 
 		<div id="text-link">
 			<a href='<s:url action="AdminLoginAction" />'>戻る</a>
