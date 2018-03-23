@@ -20,7 +20,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 
 	private List<BuyItemDTO> buyItemDTOList;
 
-	public ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
+	private ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
 
 	private String deleteFlg;
 
@@ -79,7 +79,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 		}
 	}
 
-		public String setDeleteFlg(){
+		public String setDelteFlg(){
 			return deleteFlg;
 		}
 
@@ -100,7 +100,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 			this.session = session;
 		}
 		public String getMessage(){
-			return message;
+			return this.message;
 		}
 
 		public void setMessage(String message){

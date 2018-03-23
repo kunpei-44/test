@@ -20,7 +20,7 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 
 	private List<BuyItemDTO> buyItemDTOList;
 
-	public ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
+	private ArrayList<MyPageDTO> myPageList = new ArrayList<MyPageDTO>();
 
 	private String deleteFlg;
 
