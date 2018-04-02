@@ -68,8 +68,8 @@
 		</div>
 		<div>
 			<h3>登録する内容は以下でよろしいですか。</h3>
-			<table>
 				<s:form action="UserCreateCompleteAction">
+				<table>
 				<tr id="box">
 					<td>
 						<label>ログインID：</label>
@@ -94,13 +94,10 @@
 						<s:property value="userName" escape="false" />
 					</td>
 				</tr>
-				<tr>
-					<td>
-						<s:submit value="完了" />
-					</td>
-				</tr>
-				</s:form>
 			</table>
+				<br>
+						<p><s:submit value="完了" /></p>
+				</s:form>
 		</div>
 	</div>
 	<div id="footer">

@@ -12,12 +12,8 @@ create table login_user_transaction(
 	login_id varchar(16) unique,
 	login_pass varchar(16),
 	user_name varchar(50),
-	user_gender varchar(50),
-	user_prefecture varchar(50),
-	user_address varchar(50),
-	user_tell varchar(50),
-	insert_date datetime,
-	updated_date datetime
+
+	insert_date datetime
 );
 
 drop table if exists item_info_transaction;
@@ -27,8 +23,7 @@ create table item_info_transaction(
 	item_name varchar(30),
 	item_price int,
 	item_stock int,
-	item_date datetime,
-	update_date datetime
+	item_date datetime
 );
 
 drop table if exists user_buy_item_transaction;
@@ -40,8 +35,7 @@ create table user_buy_item_transaction(
 	total_count int,
 	user_master_id varchar(16),
 	pay varchar(30),
-	insert_date datetime,
-	delete_date datetime
+	insert_date datetime
 );
 
 drop table if exists inquiry;
@@ -73,7 +67,7 @@ INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES
 ("compass", 150, 50);
 
 
-INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_gender, user_prefecture, user_address, user_tell) VALUES
-("jiro", "456", "test", "男", "東京", "千代田区", "090-XXXX-XXXX");
+INSERT INTO login_user_transaction(login_id, login_pass, user_name) VALUES
+("jiro", "456", "test");
 
 INSERT INTO admin_login(admin_id, admin_pass) VALUES("taro", "123");

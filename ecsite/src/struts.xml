@@ -5,7 +5,9 @@
 
 <struts>
 	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple" />
 	<package name="com.internousdev.ecsite.action" extends="struts-default">
+
 
 		<action name="GoHomeAction" class="com.internousdev.ecsite.action.GoHomeAction"
 			method="execute">
@@ -93,9 +95,32 @@
 			<result name="error">adminLogin.jsp</result>
 		</action>
 
-		<action name="AdminInquiryAction" class="com.internousdev.ecsite.action.AdminInquiryAction"
-			method="execute">
+		<action name="AdminInquiryAction"
+			class="com.internousdev.ecsite.action.AdminInquiryAction" method="execute">
 			<result name="success">adminInquiry.jsp</result>
+		</action>
+
+		<action name="AdminInquiryCompleteAction"
+			class="com.internousdev.ecsite.action.AdminInquiryCompleteAction"
+			method="execute">
+			<result name="success">adminInquiryComplete.jsp</result>
+			<result name="error">adminInquiry.jsp</result>
+		</action>
+
+		<action name="GoItemManageAction"
+			class="com.internousdev.ecsite.action.GoItemManageAction" method="execute">
+			<result name="success">itemManage.jsp</result>
+		</action>
+
+		<action name="ItemManageAction" class="com.internousdev.ecsite.action.ItemManageAction"
+			method="execute">
+			<result name="success">itemManageDecide.jsp</result>
+			<result name="error">itemManageError.jsp</result>
+		</action>
+
+		<action name="ItemManageDecideAction"
+			class="com.internousdev.ecsite.action.ItemManageDecideAction" method="execute">
+			<result name="success">itemManageComplete.jsp</result>
 		</action>
 
 	</package>

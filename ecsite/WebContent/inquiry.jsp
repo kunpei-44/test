@@ -74,18 +74,18 @@
 			<p>お問い合わせフォーム</p>
 		</div>
 		<s:form method="post" action="InquiryCompleteAction">
-			名前：<input type="text" name="name" /><br>
-			お問い合わせの種類：<br><br>
+			<p>名前：<input type="text" name="name" /></p><br>
+			<p>お問い合わせの種類：
 			<select name="qtype">
 				<option value="company">会社について</option>
 				<option value="product">製品について</option>
 				<option value="support">アフターサポートについて</option>
-			</select>
+			</select></p>
 			<br><br>
-			お問い合わせ内容：
-			<s:textarea name="body" />
+			<p>お問い合わせ内容：
+			<s:textarea name="body" /></p>
 			<br>
-			<s:submit value="登録" />
+			<p><s:submit value="登録" /></p>
 		</s:form>
 
 		<div id="text-link">

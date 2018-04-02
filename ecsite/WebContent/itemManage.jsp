@@ -10,8 +10,8 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
+	<title>商品更新画面</title>
 
-	<title>管理者ログイン画面</title>
 	<style type="text/css">
 		body{
 			margin: 0;
@@ -43,7 +43,7 @@
 
 		#main{
 			width: 100%;
-			height: 500px;
+			height: auto;
 			text-align: center;
 		}
 
@@ -53,13 +53,7 @@
 			background-color: black;
 			clear: both;
 		}
-
-		#text-link{
-			display: inline-block;
-			text-align: right;
-			margin-top: 50px;
-		}
-		</style>
+	</style>
 </head>
 <body>
 
@@ -67,24 +61,63 @@
 		<div id="pr">
 		</div>
 	</div>
-
 	<div id="main">
 		<div id="top">
-			<p>管理者ログイン画面</p>
+			<p>商品更新画面</p>
 		</div>
+		<div>
+		<s:if test="errorMessage !=''">
+			<s:property value="errorMessage" escape="false" />
+		</s:if>
+			<s:form action="ItemManageAction">
+			<table>
+				<s:iterator value="buyItemDTOList">
+				<tr>
+					<td>
+						<span>商品名</span>
+					</td>
+					<td>
+						<s:property value="itemName" /><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>値段</span>
+					</td>
+					<td>
+						<s:property value="itemPrice" /><span>円</span>
+					</td>
+					<td>
+						<input type="radio" name="id" value="<s:property value='id' />">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>在庫</span>
+					</td>
+					<td>
+					<s:if test="item_stock>0">
+						<s:property value="item_stock" />
+					</s:if>
+					<s:else>
+						<span>在庫売り切れ</span>
+					</s:else>
+					</td>
+				</tr>
+				<tr>
+					<td><br></td>
+				</tr>
 
-	<div>
-		<h3>管理者画面へログインするためにはIDとパスワードが必要です。</h3>
-		<s:form action="AdminLoginAction">
-			<p>ID：<s:textfield name="adminId" /></p>
-			<p>PASS:<s:password name="adminPassword" /></p>
-			<p><s:submit value="ログイン" /></p>
+				</s:iterator>
+			</table>
+			<br>
+			<p><s:submit value="更新する商品を選択" /></p>
 		</s:form>
-
-		<div id="text-link">
-			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+		<br>
+			<div>
+				<p>前画面に戻る場合は<a href='<s:url action="AdminLoginAction" />'>こちら</a></p>
+			</div>
 		</div>
-	</div>
 	</div>
 	<div id="footer">
 		<div id="pr">

@@ -1,6 +1,7 @@
 package com.internousdev.ecsite.action;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -12,9 +13,11 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class InquiryCompleteAction extends ActionSupport implements SessionAware {
 
+	private Collection<String> checkList;
 	private String name;
 	private String qtype;
 	private String body;
+//	private String insert_date;
 	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
 	private Map<String, Object> session;
 	private String deleteFlg = "0";
@@ -23,21 +26,15 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	public String execute() {
 		String ret = SUCCESS;
 
-		if (deleteFlg.equals("0")) {
-			if (!(name.equals("")) && !(body.equals(""))) {
-				int count = dao.insert(name, qtype, body);
-				if (count > 0) {
-					inquiryDTOList = dao.select();
-					session.put("inquiryDTOList", inquiryDTOList);
-
-				}
-				ret = SUCCESS;
-			}
-
-		} else{
-			delete();
-			ret = "delete";
+		if(!(name.equals("")) && !(body.equals(""))){
+			int count = dao.insert(name, qtype, body);
+			if (count > 0) {
+			inquiryDTOList = dao.select();
+			session.put("inquiryDTOList", inquiryDTOList);
 		}
+		ret = SUCCESS;
+		}
+
 		return ret;
 	}
 
@@ -85,5 +82,15 @@ public class InquiryCompleteAction extends ActionSupport implements SessionAware
 	public void setDeleteFlg(String deleteFlg) {
 		this.deleteFlg = deleteFlg;
 	}
+
+	public Collection<String> getCheckList() {
+		return checkList;
+	}
+
+	public void setCheckList(Collection<String> checkList) {
+		this.checkList = checkList;
+	}
+
+
 
 }

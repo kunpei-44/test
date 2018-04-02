@@ -79,7 +79,7 @@
 		</div>
 
 		<p>商品を管理する</p>
-		<s:form action="AdminMerchanAction">
+		<s:form action="GoItemManageAction">
 			<s:submit value="商品管理" />
 		</s:form>
 

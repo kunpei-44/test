@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
+<libraryInfo home="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home" version="1.8.0_152">
+<bootpath>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/resources.jar"/>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/rt.jar"/>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/sunrsasign.jar"/>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/jsse.jar"/>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/jce.jar"/>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/charsets.jar"/>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/jfr.jar"/>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home" version="1.6.0_65">
+<bootpath>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar"/>
+<entry path="/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="/Library/Java/Extensions"/>
+<entry path="/System/Library/Java/Extensions"/>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home" version="1.8.0_161">
+<bootpath>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/resources.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/rt.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/sunrsasign.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jsse.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jce.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/charsets.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/jfr.jar"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/Users/kunpei/Library/Java/Extensions"/>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/ext"/>
+<entry path="/Library/Java/Extensions"/>
+<entry path="/Network/Library/Java/Extensions"/>
+<entry path="/System/Library/Java/Extensions"/>
+<entry path="/usr/lib/java"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
 <libraryInfo home="C:\eclipse\pleiades\java\6" version="1.6.0_45">
 <bootpath>
 <entry path="C:\eclipse\pleiades\java\6\jre\lib\resources.jar"/>

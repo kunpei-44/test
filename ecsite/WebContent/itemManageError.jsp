@@ -10,8 +10,8 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
+	<title>商品更新画面</title>
 
-	<title>管理者ログイン画面</title>
 	<style type="text/css">
 		body{
 			margin: 0;
@@ -47,19 +47,17 @@
 			text-align: center;
 		}
 
+		h3{
+			color: red;
+			}
+
 		#footer{
 			width: 100%;
 			height: 80px;
 			background-color: black;
 			clear: both;
 		}
-
-		#text-link{
-			display: inline-block;
-			text-align: right;
-			margin-top: 50px;
-		}
-		</style>
+	</style>
 </head>
 <body>
 
@@ -67,24 +65,20 @@
 		<div id="pr">
 		</div>
 	</div>
-
 	<div id="main">
 		<div id="top">
-			<p>管理者ログイン画面</p>
+			<p>商品更新画面</p>
 		</div>
+		<div>
 
-	<div>
-		<h3>管理者画面へログインするためにはIDとパスワードが必要です。</h3>
-		<s:form action="AdminLoginAction">
-			<p>ID：<s:textfield name="adminId" /></p>
-			<p>PASS:<s:password name="adminPassword" /></p>
-			<p><s:submit value="ログイン" /></p>
-		</s:form>
+			<h3>更新する商品にチェックをいれてください</h3>
 
-		<div id="text-link">
-			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+
+			<div>
+				<p>ログインからやり直す場合は<a href='<s:url action="AdminLoginAction" />'>こちら</a></p>
+				<p>HOMEへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a>
+			</div>
 		</div>
-	</div>
 	</div>
 	<div id="footer">
 		<div id="pr">

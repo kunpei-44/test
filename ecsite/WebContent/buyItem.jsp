@@ -63,7 +63,7 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>BuyItem</p>
+			<p>商品購入画面</p>
 		</div>
 		<div>
 			<s:form action="BuyItemAction">
@@ -119,6 +119,9 @@
 						</s:else>
 					</td>
 				</tr>
+				<tr>
+					<td><br></td>
+				</tr>
 				</s:iterator>
 				<tr>
 					<td>
@@ -129,13 +132,12 @@
 						<input type="radio" name="pay" value="2">クレジットカード
 					</td>
 				</tr>
-				<tr>
-					<td>
-						<s:submit value="購入" />
-					</td>
-				</tr>
 			</table>
+			<br>
+				<p><s:submit value="購入" /></p>
 		</s:form>
+
+			<br>
 			<div>
 				<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 				<p>マイページは<a href='<s:url action="MyPageAction" />'>こちら</a></p>

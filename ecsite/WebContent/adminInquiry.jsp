@@ -76,23 +76,29 @@
 		</div>
 
 		<div id="qu">
-		<s:if test="inquiryDTOList == null">
+		<s:if test="#session.inquiryDTOList.size() == 0">
 			<h3>お問い合わせはありません。</h3>
 		</s:if>
-		<s:elseif test="inquiryDTOList != null">
+
+		<s:else>
+			<s:if test="errorMessage !=''">
+				<s:property value="errorMessage" escape="false" />
+			</s:if>
+		<s:form action="AdminInquiryCompleteAction">
 			<h3>▼お問い合わせ履歴▼</h3>
 
 		<table border="1">
 				<tr>
-					<td>名前</td>
-					<td>お問い合わせの種類</td>
-					<td>お問い合わせ内容</td>
-					<td>お問い合わせ送信時間</td>
+					<th>削除するものを選択</th>
+					<th>名前</th>
+					<th>お問い合わせの種類</th>
+					<th>お問い合わせ内容</th>
+					<th>お問い合わせ送信時間</th>
 				</tr>
 
-				<s:iterator value="session.inquiryDTOList">
+				<s:iterator value="session.inquiryDTOList" status="st">
 				<tr>
-
+					<td><s:checkbox name="checkList" fieldValue="%{#st.index}"/></td>
 					<td><s:property value="name" /></td>
 					<s:if test='qtype=="company"'>
 						<td>会社について</td>
@@ -105,19 +111,23 @@
 					</s:if>
 					<td><s:property value="body" /></td>
 					<td><s:property value="insert_date" /></td>
-
 				</tr>
+
+				<s:hidden name="name" value="%{name}"/>
+				<s:hidden name="qtype" value="%{qtype}"/>
+				<s:hidden name="body" value="%{body}"/>
+				<s:hidden name="insert_date" value="%{insert_date}"/>
+
 				</s:iterator>
 		</table>
 
-	<br>
-		<p>お問い合わせ履歴を削除する</p>
+		<br>
+		<p>選択したお問い合わせ履歴を削除する</p>
 
-		<s:form action="InquiryCompleteAction">
 			<input type="hidden" name="deleteFlg" value="1">
 			<s:submit value="削除" method="delete" />
 		</s:form>
-		</s:elseif>
+		</s:else>
 
 		<div id="text-link">
 			<a href='<s:url action="AdminLoginAction" />'>戻る</a>

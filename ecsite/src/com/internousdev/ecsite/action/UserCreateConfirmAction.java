@@ -21,6 +21,13 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		if(!(loginUserId.equals(""))
 				&& !(loginPassword.equals(""))
 				&& !(userName.equals(""))){
+			if(loginPassword.length() <= 2) {
+				setErrorMessage("パスワードが短いです。３文字以上にしてください。");
+				result = ERROR;
+			}else if(loginPassword.length() >= 16) {
+				setErrorMessage("パスワードが長いです。１５文字以内にしてください。");
+				result = ERROR;
+			}
 			session.put("loginUserId", loginUserId);
 			session.put("loginPassword", loginPassword);
 			session.put("userName", userName);

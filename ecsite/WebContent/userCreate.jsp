@@ -65,14 +65,14 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>UserCreate</p>
+			<p>新規ユーザー作成</p>
 		</div>
 		<div>
-			<s:if test="errorMassage !=''">
-				<s:property value="errorMassage" escape="false" />
+			<s:if test="errorMessage !=''">
+				<s:property value="errorMessage" escape="false" />
 			</s:if>
-			<table>
 			<s:form action="UserCreateConfirmAction">
+			<table>
 			<tr>
 				<td>
 					<label>ログインID：</label>
@@ -97,9 +97,11 @@
 					<input type="text" name="userName" value="" />
 				</td>
 			</tr>
-			<s:submit value="登録" />
-			</s:form>
 			</table>
+			<br>
+			<p><s:submit value="登録" /></p>
+			</s:form>
+			<br>
 			<div>
 				<span>前画面に戻る場合は</span>
 				<a href='<s:url action="HomeAction" />'>こちら</a>

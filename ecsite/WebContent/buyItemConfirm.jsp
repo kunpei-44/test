@@ -45,7 +45,7 @@
 
 		#main{
 			width: 100%;
-			height: 500px;
+			height: auto;
 			text-align: center;
 		}
 
@@ -71,27 +71,27 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>BuyItem</p>
+			<p>商品購入確認画面</p>
 		</div>
 		<div>
 			<s:form>
-
+			<table>
 			<s:iterator value="buyItemDTOList">
 			<s:if test="count !=0">
 			<tr>
-				<td>商品名</td>
+				<th>商品名</th>
 				<td><s:property value="itemName" /></td>
 			</tr>
 			<tr>
-				<td>値段</td>
+				<th>値段</th>
 				<td><s:property value="total_price" /><span>円</span></td>
 			</tr>
 			<tr>
-				<td>購入個数</td>
+				<th>購入個数</th>
 				<td><s:property value="count" /><span>個</span></td>
 			</tr>
 			<tr>
-				<td>支払い方法</td>
+				<th>支払い方法</th>
 				<td><s:property value="pay" /></td>
 			</tr>
 			<tr>
@@ -113,6 +113,7 @@
 				<td><input type="button" value="完了"
 					onclick="submitAction('BuyItemConfirmAction')" /></td>
 			</tr>
+			</table>
 			</s:form>
 		</div>
 

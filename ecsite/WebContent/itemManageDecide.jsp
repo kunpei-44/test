@@ -10,7 +10,7 @@
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>Login画面</title>
+	<title>商品更新入力画面</title>
 
 	<style type="text/css">
 		body{
@@ -43,7 +43,7 @@
 
 		#main{
 			width: 100%;
-			height: 500px;
+			height: 600px;
 			text-align: center;
 		}
 
@@ -53,12 +53,7 @@
 			background-color: black;
 			clear: both;
 		}
-
-		#text-link{
-			display: inline-block;
-			text-align: right;
-		}
-		</style>
+	</style>
 </head>
 <body>
 
@@ -68,27 +63,53 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>Login</p>
+			<p>商品更新情入力画面</p>
 		</div>
 		<div>
-			<h3>商品を購入する際にはログインをお願いします。</h3>
-			<s:form action="LoginAction">
-				<p>ユーザー名：<s:textfield name="loginUserId" /></p>
-				<p>パスワード：<s:password name="loginPassword" /></p>
-				<br>
-				<p><s:submit value="ログイン" /></p>
-			</s:form>
-			<br/>
-			<div id="text-link">
-				<p>新規ユーザー登録は
-					<a href='<s:url action="UserCreateAction" />'>こちら</a></p>
-				<p>Homeへ戻る場合は
-					<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+			<h3>更新する情報を入力してください。</h3>
+			<s:form action="ItemManageDecideAction">
+			<table>
+				<s:iterator value="list">
+				<tr>
+					<td>
+						<span>商品名</span>
+					</td>
+					<td>
+						<input type="text" name="item_name" value="<s:property value='itemName'/>">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>値段</span>
+					</td>
+					<td>
+						<input type="text" name="item_price" value="<s:property value='itemPrice'/>">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>在庫</span>
+					</td>
+					<td>
+					<s:if test="item_stock>0">
+						<input type="text" name="item_stock" value="<s:property value='item_stock'/>">
+					</s:if>
+					<s:else>
+						<input type="text" name="item_stock" value="<s:property value='item_stock_null'/>">
+					</s:else>
+					</td>
+				</tr>
+				</s:iterator>
+			</table>
+			<br>
+				<p><s:submit value="更新する" /></p>
+		</s:form>
+		<br><br>
+			<div>
+				<p>前画面に戻る場合は<a href='<s:url action="GoItemManageAction" />'>こちら</a></p>
 			</div>
 		</div>
-
 	</div>
-
 	<div id="footer">
 		<div id="pr">
 		</div>

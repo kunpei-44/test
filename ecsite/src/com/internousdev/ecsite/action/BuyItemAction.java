@@ -18,7 +18,9 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	public Map<String, Object> session;
 
 	public String execute(){
+
 		String result = SUCCESS;
+
 		session.put("count", count);
 
 		@SuppressWarnings("unchecked")

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+<entry loc="/Applications/Eclipse_4.7.2.app/Contents/java/8/Home" stamp="1513692748000"/>
+<entry loc="/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home" stamp="1521905402000"/>
+<entry loc="/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home" stamp="1513730643000"/>
 <entry loc="C:\eclipse\pleiades\java\6" stamp="1457530272000"/>
 <entry loc="C:\eclipse\pleiades\java\7" stamp="1457530326000"/>
 <entry loc="C:\eclipse\pleiades\java\8" stamp="1457530378000"/>

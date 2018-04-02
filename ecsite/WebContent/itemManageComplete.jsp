@@ -4,15 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-
-	<title>管理者ログイン画面</title>
+	<meta charset="utf-8">
+	<title>更新完了画面</title>
 	<style type="text/css">
+
 		body{
 			margin: 0;
 			padding: 0;
@@ -43,7 +44,7 @@
 
 		#main{
 			width: 100%;
-			height: 500px;
+			height: 600px;
 			text-align: center;
 		}
 
@@ -53,13 +54,7 @@
 			background-color: black;
 			clear: both;
 		}
-
-		#text-link{
-			display: inline-block;
-			text-align: right;
-			margin-top: 50px;
-		}
-		</style>
+	</style>
 </head>
 <body>
 
@@ -67,28 +62,42 @@
 		<div id="pr">
 		</div>
 	</div>
-
 	<div id="main">
 		<div id="top">
-			<p>管理者ログイン画面</p>
+			<p>商品更新情完了画面</p>
 		</div>
+		<div>
+			<h3>更新が完了しました。</h3>
 
-	<div>
-		<h3>管理者画面へログインするためにはIDとパスワードが必要です。</h3>
-		<s:form action="AdminLoginAction">
-			<p>ID：<s:textfield name="adminId" /></p>
-			<p>PASS:<s:password name="adminPassword" /></p>
-			<p><s:submit value="ログイン" /></p>
-		</s:form>
+			<br>
 
-		<div id="text-link">
-			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+			<h3>商品の更新情報は以下の通りです。</h3>
+
+			<table border="1">
+				<tr>
+					<th>商品名</th>
+					<th>値段</th>
+					<th>在庫</th>
+				</tr>
+				<tr>
+					<td><s:property value="session.item_name" /></td>
+					<td><s:property value="session.item_price" /></td>
+					<td><s:property value="session.item_stock" /></td>
+				</tr>
+			</table>
+
+			<br><br>
+
+			<div>
+				<p>他の商品を更新する場合は<a href='<s:url action="GoItemManageAction" />'>こちら</a></p>
+				<p>ホーム画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+			</div>
 		</div>
-	</div>
 	</div>
 	<div id="footer">
 		<div id="pr">
 		</div>
 	</div>
+
 </body>
 </html>

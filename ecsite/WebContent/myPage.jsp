@@ -69,7 +69,7 @@
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>MyPage</p>
+			<p>マイページ</p>
 		</div>
 		<div>
 		<s:form>
@@ -96,7 +96,7 @@
 				<th>支払い方法</th>
 				<th>購入日</th>
 			</tr>
-			<s:iterator value="myPageList">
+			<s:iterator value="myPageList" status="st">
 				<tr>
 					<td><s:property value="itemName" /></td>
 					<td><s:property value="totalPrice" /><span>円</span></td>
@@ -104,8 +104,11 @@
 					<td><s:property value="payment" /></td>
 					<td><s:property value="insert_date" /></td>
 				</tr>
+
 			</s:iterator>
 			</table>
+			<br>
+			<p>購入履歴を消す場合は下の”削除”を押してください。</p>
 			<s:form action="MyPageAction">
 				<input type="hidden" name="deleteFlg" value="1">
 				<s:submit value="削除" method="delete" />
@@ -114,6 +117,7 @@
 		<s:if test="message !=null">
 			<h3><s:property value="message" /></h3>
 		</s:if>
+		<br>
 		<div id="text-right">
 			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 			<p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>

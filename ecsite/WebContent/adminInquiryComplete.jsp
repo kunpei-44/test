@@ -4,14 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
-	<title>管理者ログイン画面</title>
+	<title>問い合わせ管理完了画面</title>
 	<style type="text/css">
 		body{
 			margin: 0;
@@ -43,7 +43,7 @@
 
 		#main{
 			width: 100%;
-			height: 500px;
+			height: auto;
 			text-align: center;
 		}
 
@@ -56,10 +56,12 @@
 
 		#text-link{
 			display: inline-block;
-			text-align: right;
+			text-align: center;
 			margin-top: 50px;
+			margin-bottom: 120px;
 		}
 		</style>
+
 </head>
 <body>
 
@@ -67,22 +69,18 @@
 		<div id="pr">
 		</div>
 	</div>
-
 	<div id="main">
 		<div id="top">
-			<p>管理者ログイン画面</p>
+			<p>お問い合わせ管理完了画面</p>
 		</div>
 
-	<div>
-		<h3>管理者画面へログインするためにはIDとパスワードが必要です。</h3>
-		<s:form action="AdminLoginAction">
-			<p>ID：<s:textfield name="adminId" /></p>
-			<p>PASS:<s:password name="adminPassword" /></p>
-			<p><s:submit value="ログイン" /></p>
-		</s:form>
+		<div>
+			<p>お問い合わせの履歴を削除しました。</p>
+
 
 		<div id="text-link">
-			<p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
+			<p><a href='<s:url action="AdminInquiryAction" />'>戻る</a></p>
+			<p><a href='<s:url action="GoHomeAction" />'>ホームへ</a></p>
 		</div>
 	</div>
 	</div>

@@ -27,6 +27,7 @@ public class AdminInquiryDAO {
 
 			while(resultSet.next()){
 				InquiryDTO dto = new InquiryDTO();
+				
 				dto.setName(resultSet.getString("name"));
 				dto.setQtype(resultSet.getString("qtype"));
 				dto.setBody(resultSet.getString("body"));

@@ -12,49 +12,17 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class AdminInquiryAction extends ActionSupport implements SessionAware {
 
-	private String name;
-	private String qtype;
-	private String body;
 	List<InquiryDTO> inquiryDTOList = new ArrayList<InquiryDTO>();
 	private Map<String, Object> session;
 	private String deleteFlg = "0";
-	private AdminInquiryDAO dao = new AdminInquiryDAO();
 
 	public String execute(){
-		String ret = SUCCESS;
 
-		if (deleteFlg.equals("0")) {
-				inquiryDTOList = dao.select();
-				session.put("inquiryDTOList", inquiryDTOList);
+		AdminInquiryDAO dao = new AdminInquiryDAO();
+		inquiryDTOList = dao.select();
+		session.put("inquiryDTOList", inquiryDTOList);
+		return SUCCESS;
 
-				ret = SUCCESS;
-			}
-
-		return ret;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getQtype() {
-		return qtype;
-	}
-
-	public void setQtype(String qtype) {
-		this.qtype = qtype;
-	}
-
-	public String getBody() {
-		return body;
-	}
-
-	public void setBody(String body) {
-		this.body = body;
 	}
 
 	public Map<String, Object> getSession() {
