@@ -12,8 +12,8 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="/Users/kunpei/Desktop/workspace/workspace-hayashi/test/ecsample"/>
 			<item value="/Users/kunpei/Desktop/workspace/workspace-hayashi/test/ecsite"/>
+			<item value="/Users/kunpei/Desktop/workspace/workspace-hayashi/test/ecsample"/>
 			<item value="/Users/kunpei/Desktop/workspace/workspace-hayashi/test/Servers2"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-hayashi\test\ecsample"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-matsuno\test"/>
